@@ -1,0 +1,14 @@
+OldClock uses components and artwork from The OldOS Project by Zane Kleinberg (@zzanehip),
+licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
+https://creativecommons.org/licenses/by/4.0/
+Original project: https://github.com/zzanehip/The-OldOS-Project
+
+The OldOS Project has no Clock app; OldClock is a new iOS 6 Clock built from its
+components (navigation bar, bar buttons, tab bar, ON/OFF toggle, grouped tables).
+Changes and additions are described in README.md and EXTRACTION.json.
+
+Bundled resources from The OldOS Project: bar / table artwork (Assets.xcassets/Clock Icons:
+BarPlus, NavBack, TableNext, RemoveMinus, ReorderGrabber, SearchGlass, TextFieldClear,
+BlueCheck) and the app icon (Homescreen Icons/Clock, upscaled, Dark/Tinted derived).
+The tab glyphs and the ringtones are original work made for OldClock.
+The city list is derived from the IANA time zone database (public domain).
