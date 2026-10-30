@@ -114,10 +114,11 @@ jobs:
           lipo -info "$BINARY"
 
           test -d "$APP/Settings.bundle" || { echo "::error::Settings.bundle missing"; exit 1; }
-          TONES="$(find "$APP" -maxdepth 1 -name 'KeypadTone-*.caf' | wc -l | tr -d ' ')"
-          echo "DTMF tones: $TONES"
-          [ "$TONES" -eq 12 ] || { echo "::error::Expected 12 DTMF tones, found $TONES"; exit 1; }
-          test -f "$APP/Marimba.caf" || { echo "::error::alarm sounds missing"; exit 1; }
+          TONES="$(find "$APP" -maxdepth 1 -name '*.caf' | wc -l | tr -d ' ')"
+          echo "Alarm / timer sounds: $TONES"
+          [ "$TONES" -eq 25 ] || { echo "::error::Expected 25 alarm sounds, found $TONES"; exit 1; }
+          test -f "$APP/Marimba.caf" || { echo "::error::Marimba.caf missing"; exit 1; }
+          test -f "$APP/WorldCities.json" || { echo "::error::WorldCities.json missing"; exit 1; }
 
           ICONS="$(find "$APP" -maxdepth 1 -name 'AppIcon*.png' -print)"
           if [ -z "$ICONS" ]; then
